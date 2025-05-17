@@ -1,12 +1,12 @@
 .menu-toggle {
         display: none;
         position: fixed;
-        top: 2rem;
+        top: 0.75rem;
         right: 2rem;
         width: 50px;
         height: 36px;
         border-radius: 99px;
-        background-color: #2e3047;
+        background-color: var(--menu-toggle-btn);
         cursor: pointer;
 }
 
@@ -26,7 +26,7 @@
         width: 100%;
         height: 4px;
         border-radius: 99px;
-        background-color: #FFF;
+        background-color: var(--hamburger);
         transition-duration: .25s;
 }
 
@@ -56,77 +56,87 @@
 
 .sidebar {
         flex: 1 1 0;
-        max-width: 300px;
-        padding: 2rem 1rem;
-        background-color: #2e3047;
+        padding: 0rem;
+        background-color: var(--nav-and-header-bg);
+        min-height: inherit;
+        max-width: 200px;
 }
 
 .sidebar h3 {
-        color: #707793;
+        color: var(--sidebar-h3);
         font-size: 0.75rem;
         text-transform: uppercase;
         margin-bottom: 0.5em;
 }
 
 .sidebar .menu {
-        margin: 0 -1rem;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        min-height: inherit;
+        border-radius: 1rem;
+        background: var(--nav-and-header-bg);
 }
 
 .sidebar .menu .menu-item {
         display: block;
-        padding: 1em;
-        color: #FFF;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.8rem;
+        padding-top: 0.8rem;
+        border-radius: inherit;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        color: var(--menu-item-text);
+        background-color: var(--nav-and-header-bg);
         text-decoration: none;
         transition: 0.2s linear;
+        text-align: center;
+        min-width: 100px;
 }
 
 .sidebar .menu .menu-item:hover,
 .sidebar .menu .menu-item.is-active {
-        color: #3bba9c;
-        border-right: 5px solid #3bba9c;
+        color: var(--menu-item-active);
+        background-color: var(--menu-item-active-bg);
 }
 
 .sidebar .menu .menu-item:hover {
-        border-right: 5px solid #3bba9c;
+        background-color: var(--menu-item-active-bg);
+        border-style: none;
 }
 
-.content {
+.content-wrapper {
+        background-color: var(--nav-and-header-bg);
         flex: 1 1 0;
-        padding: 2rem;
+        padding: 0rem;
+        min-height: inherit;
+        min-width: 740px;
 }
 
-.content h1 {
-        color: #3C3F58;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-}
-
-.content p {
-        color: #707793;
-}
-
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
         .sidebar {
-                max-width: 200px;
+                max-width: 150px;
         }
-}
+} */
 
-@media (max-width: 768px) {
+@media (max-width: 845px) {
         .menu-toggle {
                 display: block;
-        }
-
-        .content {
-                padding-top: 2rem;
         }
 
         .sidebar {
                 position: fixed;
                 top: 0;
-                left: -300px;
+                left: -150px;
                 height: 100vh;
                 width: 100%;
-                max-width: 300px;
+                max-width: 150px;
                 transition: 0.2s linear;
         }
 

@@ -2,39 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
-    <link rel="icon" href="/content/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/navigation.css" />
-    <script type="module" src="/scripts/navigation.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index</title>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+        <link rel="icon" href="/content/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/styles/main.css" />
+        <link rel="stylesheet" href="/styles/header.css" />
+        <link rel="stylesheet" href="/styles/navigation_and_content.css" />
+        <link rel="stylesheet" href="/styles/page_content.css" />
+        <link rel="stylesheet" href="/styles/footer.css" />
+        <script type="module" src="/scripts/navigation.js"></script>
+        <script type="module" src="/scripts/theme_toggle.js"></script>
 </head>
 
 <body>
-    <div class="app">
-        <div class="menu-toggle">
-            <div class="hamburger">
-                <span></span>
-            </div>
+        <header class="webpage-header">
+                <!-- <img src="logo.png" alt="webpage logo" class="logo"> -->
+                <!-- <span class="header-text"> </span> -->
+                <label class="theme-switch-cb">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                </label>
+        </header>
+
+        <div class="app">
+                <div class="menu-toggle">
+                        <div class="hamburger">
+                                <span></span>
+                        </div>
+                </div>
+
+                <aside class="sidebar">
+                        <nav class="menu">
+                                <a href="/index.html" class="menu-item is-active">Index</a>
+                                <a href="/content/notes_bookmark/index.html" class="menu-item">Notes</a>
+                                <a href="/content/projects_bookmark/index.html" class="menu-item">Projects</a>
+                                <a href="/content/aboutme_bookmark/index.html" class="menu-item">About me</a>
+                        </nav>
+
+                </aside>
+
+                <main class="content-wrapper">
+                        <article class="page-content">
+                                <h1>Index</h1>
+                                <h2>1.1 Index</h2>
+                                <h3>1.1.1 Index</h3>
+                                <h4>1.1.1.1 Index</h4>
+                                <p>dupa dupa dupa</p>
+                                <h2>Variables</h2>
+                                <p>In JavaScript, variables can be declared using <code>var</code>, <code>let</code>, or
+                                        <code>const</code>.
+                                </p>
+
+                                <h3>var vs let vs const</h3>
+                                <p><code>var</code> is function-scoped, while <code>let</code> and <code>const</code>
+                                        are block-scoped.
+                                </p>
+
+                                <h2>Functions</h2>
+                                <p>Functions can be declared or expressed. Arrow functions are concise and bind
+                                        <code>this</code>
+                                        lexically.
+                                </p>
+
+                                <h4>Example: Arrow Function</h4>
+                                <pre><code>
+            const add = (a, b) => a + b;
+                </code></pre>
+                        </article>
+                </main>
         </div>
-
-        <aside class="sidebar">
-            <nav class="menu">
-                <a href="/index.html" class="menu-item is-active">Index</a>
-                <a href="/content/notes_bookmark/index.html" class="menu-item">Notes</a>
-                <a href="/content/projects_bookmark/index.html" class="menu-item">Projects</a>
-                <a href="/content/aboutme_bookmark/index.html" class="menu-item">About me</a>
-            </nav>
-
-        </aside>
-
-        <main class="content">
-            <h1>Index</h1>
-            <p></p>
-        </main>
-    </div>
+        <footer class="footer">
+                <div class="footer-text">
+                        Adam Domrazek | <i>Last update: 2024.05.16</i>
+                </div>
+        </footer>
 </body>
 
 </html>

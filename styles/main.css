@@ -1,12 +1,65 @@
+/* Root refers to top level element of html file (<html>) */
+:root {
+        /* Colors for light theme */
+        --nav-and-header-bg: #ebebeb;
+        --header-text: #000000;
+        --slider-bg: #46940e;
+        --slider-dot-bg: #262626;
+        --menu-toggle-btn: #000000;
+        --hamburger: #ffffff;
+        --sidebar-h3: #707793;
+        --menu-item-text: #000000;
+        --menu-item-active: #8a5b03;
+        --menu-item-active-bg: #d2d2d2;
+        --page-content-bg: #ffffff;
+        --page-content-text-bg: #ffffff;
+        --page-content-text: #000000;
+        --page-content-h1-bot-border: #464646;
+        --footer-bg: #e0e0e0;
+        --footer-line: #a5a5a5;
+}
+
+/* This class is not acive by default. When this class is applied, it 
+overrides the default variables */
+.dark-theme {
+        /* Colors for dark theme */
+        --nav-and-header-bg: #292a2b;
+        --header-text: #00eeff;
+        --slider-bg: #46940e;
+        --slider-dot-bg: #262626;
+        --menu-toggle-btn: #2e3047;
+        --hamburger: #ffffff;
+        --sidebar-h3: #707793;
+        --menu-item-text: #ffffff;
+        --menu-item-active: #ffa600;
+        --menu-item-active-bg: #2e3047;
+        --page-content-bg: #ffffff;
+        --page-content-text-bg: #ffffff;
+        --page-content-text: #000000;
+        --page-content-h1-bot-border: #cb3131;
+        --footer-bg: #ffffff;
+}
+
+
+/* Thats how you can apply different theme */
+/*
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+*/
+
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Fira Sans;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Red Hat Text", sans-serif, "Fira Sans";
+        background-color: var(--nav-and-header-bg);
 }
 
 .app {
-    display: flex;
-    min-height: 100vh;
+        display: flex;
+        min-height: 100vh;
 }
-

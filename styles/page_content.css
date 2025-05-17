@@ -1,0 +1,53 @@
+.page-content {
+        padding-top: 1.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        background-color: var(--page-content-bg);
+        min-height: inherit;
+        border-radius: 1rem;
+        color: var(--page-content-text);
+}
+
+.page-content * {
+        background-color: var(--page-content-text-bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+        font-weight: 700;
+        line-height: 1.2;
+        margin-top: 0.5em;
+}
+
+h1 {
+        font-size: 2.5rem;
+        /* border-bottom: 3px solid var(--page-content-h1-bot-border); */
+        /* padding-bottom: 0.2em; */
+        /* padding-top: 0.2em; */
+}
+
+h2 {
+        font-size: 2rem;
+}
+
+h3 {
+        font-size: 1.75rem;
+}
+
+h4 {
+        font-size: 1.4rem;
+}
+
+p {
+        font-size: 1.128rem; */
+        /* line-height: 1.6; */
+        /* margin-bottom: 1em; */
+}
+
