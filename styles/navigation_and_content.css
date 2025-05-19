@@ -1,13 +1,16 @@
 .menu-toggle {
         display: none;
-        position: fixed;
-        top: 0.75rem;
-        right: 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         width: 50px;
-        height: 36px;
+        height: 50px;
         border-radius: 99px;
         background-color: var(--menu-toggle-btn);
         cursor: pointer;
+        z-index: 1000;
+        border-style: solid;
+        border-color: var(--menu-toggle-btn-border);
 }
 
 .hamburger {
@@ -58,6 +61,12 @@
         flex: 1 1 0;
         padding: 0rem;
         background-color: var(--nav-and-header-bg);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-right-color: var(--footer-line);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-top-color: var(--footer-line);
         min-height: inherit;
         max-width: 200px;
 }
@@ -112,6 +121,9 @@
 }
 
 .content-wrapper {
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-top-color: var(--footer-line);
         background-color: var(--nav-and-header-bg);
         flex: 1 1 0;
         padding: 0rem;

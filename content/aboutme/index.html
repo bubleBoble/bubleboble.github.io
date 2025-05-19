@@ -4,21 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
+    <title>About me</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
     <link rel="icon" href="/content/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/navigation_and_content.css" />
     <link rel="stylesheet" href="/styles/page_content.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/resume.css">
     <script type="module" src="/scripts/navigation.js"></script>
+    <script type="module" src="/scripts/theme_toggle.js"></script>
+    <script type="module" src="/scripts/resume_download.js"></script>
 </head>
 
 <body>
     <header class="webpage-header">
-        <!-- <img src="logo.png" alt="webpage logo" class="logo"> -->
-         <div class="header-text">Last update: 2025.05.16</span>
+        <button class="toggle-mode">🌙</button>
     </header>
 
     <div class="app">
@@ -31,24 +38,28 @@
         <aside class="sidebar">
             <nav class="menu">
                 <a href="/index.html" class="menu-item">Index</a>
-                <a href="/content/notes_bookmark/index.html" class="menu-item is-active">Notes</a>
-                <a href="/content/projects_bookmark/index.html" class="menu-item">Projects</a>
-                <a href="/content/aboutme_bookmark/index.html" class="menu-item">About me</a>
+                <a href="/content/notes/index.html" class="menu-item">Notes</a>
+                <a href="/content/projects/index.html" class="menu-item">Projects</a>
+                <a href="/content/aboutme/index.html" class="menu-item is-active">About me</a>
             </nav>
 
         </aside>
 
         <main class="content-wrapper">
             <article class="page-content">
-                <h1>Notes</h1>
+                <h1>About me</h1>
+
+                <h4>
+                    Here's my resume: <a href="/content/aboutme/resume/resume.html">link</a>
+                </h4>
             </article>
         </main>
     </div>
-    <!-- <footer>
+    <footer class="footer">
         <div class="footer-text">
-            Last update: 2024.05.16
+            Adam Domrazek | <i>Last update: 2024.05.16</i>
         </div>
-    </footer> -->
+    </footer>
 </body>
 
 </html>

@@ -1,11 +1,12 @@
 /* Root refers to top level element of html file (<html>) */
 :root {
         /* Colors for light theme */
-        --nav-and-header-bg: #ebebeb;
+        --nav-and-header-bg: #e0e0e0;
         --header-text: #000000;
-        --slider-bg: #46940e;
-        --slider-dot-bg: #262626;
-        --menu-toggle-btn: #000000;
+        --theme-toggle: #8c8888;
+        --theme-toggle-border: #787878;
+        --menu-toggle-btn: #8c8888;
+        --menu-toggle-btn-border: #787878;
         --hamburger: #ffffff;
         --sidebar-h3: #707793;
         --menu-item-text: #000000;
@@ -25,8 +26,7 @@ overrides the default variables */
         /* Colors for dark theme */
         --nav-and-header-bg: #292a2b;
         --header-text: #00eeff;
-        --slider-bg: #46940e;
-        --slider-dot-bg: #262626;
+        --theme-toggle: #000000;
         --menu-toggle-btn: #2e3047;
         --hamburger: #ffffff;
         --sidebar-h3: #707793;
@@ -61,5 +61,26 @@ body {
 
 .app {
         display: flex;
-        min-height: 100vh;
+        /* min-height: 100vh; */
+}
+
+/* Link style */
+a {
+        color: #1e90ff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+}
+
+a:hover {
+        color: #ff4500;
+        text-decoration: underline;
+}
+
+a:active {
+        color: #2e8b57;
+}
+
+a:visited {
+        color: #6a5acd;
 }

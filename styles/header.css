@@ -18,41 +18,27 @@
         background-color: var(--nav-and-header-bg);
 }
 
-/* Theme switch toggle */
-.theme-switch-cb {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        right: 1rem;
-}
-
-.theme-switch-cb input {
-        display: none;
-}
-
-.slider {
+.toggle-mode {
+        /* position: fixed;
+        top: 0.75%;
+        right: 2.5%; */
+        /* margin-left: auto; */
+        font-size: 30px;
         width: 50px;
-        height: 25px;
-        background: var(--slider-bg);
-        border-radius: 25px;
-        display: inline-block;
-        position: relative;
+        height: 50px;
+        background: none;
+        border: none;
         cursor: pointer;
-        vertical-align: middle;
+        outline: none;
+        transition: transform 0.3s;
+        border-style: solid;
+        border-color: var(--theme-toggle-border);
+        border-radius: 100%;
+        padding: 5px;
+        background-color: var(--theme-toggle);
+        margin-left: auto;
 }
 
-.slider::before {
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        top: 2.5px;
-        left: 2.5px;
-        background: var(--slider-dot-bg);
-        border-radius: 50%;
-        transition: 0.3s;
-}
-
-input:checked+.slider::before {
-        transform: translateX(25px);
+.toggle-mode:hover {
+        transform: scale(1.1);
 }
