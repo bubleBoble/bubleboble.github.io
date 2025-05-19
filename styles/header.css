@@ -3,7 +3,7 @@
         align-items: center;
         padding: 1rem;
         min-height: 60px;
-        background-color: var(--nav-and-header-bg);
+        background-color: var(--header-bg);
 }
 
 .logo {
@@ -31,11 +31,11 @@
         cursor: pointer;
         outline: none;
         transition: transform 0.3s;
-        border-style: solid;
-        border-color: var(--theme-toggle-border);
-        border-radius: 100%;
+        /* border-style: solid; */
+        /* border-color: var(--theme-toggle-border); */
+        /* border-radius: 100%; */
         padding: 5px;
-        background-color: var(--theme-toggle);
+        /* background-color: var(--theme-toggle); */
         margin-left: auto;
 }
 

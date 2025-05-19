@@ -1,6 +1,7 @@
 /* Root refers to top level element of html file (<html>) */
 :root {
         /* Colors for light theme */
+        --header-bg: #bababa;
         --nav-and-header-bg: #e0e0e0;
         --header-text: #000000;
         --theme-toggle: #8c8888;
