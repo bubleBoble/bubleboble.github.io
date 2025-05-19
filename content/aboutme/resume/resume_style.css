@@ -136,6 +136,7 @@ body.dark-theme .toggle-mode {
 }
 
 /* Button Styling */
+#hide-extra-stuff,
 #download {
     padding: 12px 25px;
     font-size: 16px;
@@ -149,24 +150,28 @@ body.dark-theme .toggle-mode {
 }
 
 /* Hover Effect */
+#hide-extra-stuff:hover,
 #download:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
 
 /* Active State */
+#hide-extra-stuff:active,
 #download:active {
     background-color: #004085;
     transform: translateY(0);
 }
 
 /* Focus State */
+#hide-extra-stuff:focus,
 #download:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 /* Center the Button */
+#hide-extra-stuff,
 #download {
     display: block;
     margin: 20px auto;
