@@ -1,5 +1,6 @@
 .webpage-header {
         display: flex;
+        position: relative;
         align-items: center;
         padding: 1rem;
         min-height: 60px;
@@ -19,10 +20,6 @@
 }
 
 .toggle-mode {
-        /* position: fixed;
-        top: 0.75%;
-        right: 2.5%; */
-        /* margin-left: auto; */
         font-size: 30px;
         width: 50px;
         height: 50px;
@@ -31,11 +28,7 @@
         cursor: pointer;
         outline: none;
         transition: transform 0.3s;
-        /* border-style: solid; */
-        /* border-color: var(--theme-toggle-border); */
-        /* border-radius: 100%; */
         padding: 5px;
-        /* background-color: var(--theme-toggle); */
         margin-left: auto;
 }
 
