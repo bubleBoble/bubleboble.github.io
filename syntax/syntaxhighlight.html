@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Individual Code Blocks with Toggleable Line Numbers</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- https://cdnjs.com/libraries/prism -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-tomorrow.min.css"
+        integrity="sha512-kSwGoyIkfz4+hMo5jkJngSByil9jxJPKbweYec/UgS+S1EgE45qm4Gea7Ks2oxQ7qiYyyZRn66A9df2lMtjIsw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.min.css"
+        integrity="sha512-3/cdM9qaJ5lBlzRKqwhMw+ZcNCVonz66BO6HgJudG/P1azm9wFrru31SsBa4T4Ew1AOH8HfDXSWS6emWwPl42A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"
+        integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-javascript.min.js"
+        integrity="sha512-yvw5BDA/GQu8umskpIOBhX2pDLrdOiriaK4kVxtD28QEGLV5rscmCfDjkrx52tIgzLgwzs1FsALV6eYDpGnEkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-css.min.js"
+        integrity="sha512-mHqYW9rlMztkE8WFB6wIPNWOVtQO50GYBsBRMyA1CMk34zLJ6BrvVy3RVHoIIofugmnoNLGxkuePQ9VT2a3u8w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.min.js"
+        integrity="sha512-QTYXYEniHb1m0ZKtSyfpmw40uH9vPfV07vxsv/plIRMEiON4yOp2qoZiv/FTqFIOym4bdQ4+p9RtHaCMC0ApRw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #999999;
+            color: #f0f0f0;
+            padding: 2rem;
+        }
+
+        h1,
+        h2 {
+            color: #ffd700;
+        }
+
+        .code-container {
+            position: relative;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            background-color: #2d2d2d;
+            padding-top: 0rem;
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+
+        .button-group {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .copy-button,
+        .toggle-lines {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .copy-button:hover,
+        .toggle-lines:hover {
+            background-color: #666;
+        }
+
+        pre,
+        code {
+            background: transparent !important;
+            font-family: 'Fira Code', monospace !important;
+            /* white-space: pre;
+            tab-size: 4;
+            overflow-x: auto; */
+        }
+
+        pre {
+            margin: 0;
+            padding: 1rem;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Code Snippets with Individual Toggle Buttons</h1>
+
+    <!-- JavaScript Example -->
+    <h2>JavaScript Example</h2>
+    <div class="code-container">
+        <div class="button-group">
+            <button class="copy-button">Copy</button>
+            <button class="toggle-lines">Toggle Line Numbers</button>
+        </div>
+        <pre><code class="language-javascript">function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+greet("World");</code></pre>
+    </div>
+
+    <!-- CSS Example -->
+    <h2>CSS Example</h2>
+    <div class="code-container">
+        <div class="button-group">
+            <button class="copy-button">Copy</button>
+            <button class="toggle-lines">Toggle Line Numbers</button>
+        </div>
+        <pre><code class="language-css">
+body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        color: #333;
+}</code></pre>
+    </div>
+
+    <script>
+        // Copy button functionality
+        document.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const code = button.closest('.code-container').querySelector('code').innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.textContent = 'Copied!';
+                    setTimeout(() => button.textContent = 'Copy', 1500);
+                });
+            });
+        });
+
+        // Toggle line numbers per block
+        document.querySelectorAll('.toggle-lines').forEach(button => {
+            button.addEventListener('click', () => {
+                const pre = button.closest('.code-container').querySelector('pre');
+                const hasLines = pre.classList.contains('line-numbers');
+                pre.classList.toggle('line-numbers', !hasLines);
+                Prism.highlightElement(pre.querySelector('code'));
+            });
+        });
+    </script>
+
+</body>
+
+</html>

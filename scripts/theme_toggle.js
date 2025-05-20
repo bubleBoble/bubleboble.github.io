@@ -9,6 +9,7 @@ function getCookie(name) {
         if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
+
 window.addEventListener('DOMContentLoaded', () => {
         const savedTheme = getCookie('theme');
         const body = document.body;
@@ -37,3 +38,18 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
         });
 });
+
+
+// function loadTheme() {
+//         const savedTheme = getCookie('theme');
+//         const body = document.body;
+//         const button = document.querySelector('.toggle-mode');
+
+//         if (savedTheme === 'dark') {
+//                 body.classList.add('dark-theme');
+//                 button.textContent = '☀️';
+//         } else {
+//                 body.classList.remove('dark-theme');
+//                 button.textContent = '🌙';
+//         }
+// }

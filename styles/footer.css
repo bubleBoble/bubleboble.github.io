@@ -3,7 +3,7 @@
         padding-bottom: 15px;
         background-color: var(--footer-bg);
         border-top-style: solid;
-        border-top-width: 1px;
+        border-top-width: 2px;
         border-top-color: var(--footer-line);
         /* border top */
 }
@@ -25,6 +25,8 @@
         
 }
 
-.footer-text i {
+.footer-text {
         background-color: var(--footer-bg);
+        color: var(--footer-text);
+        font-size: 0.8rem;
 }

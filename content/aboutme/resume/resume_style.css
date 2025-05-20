@@ -196,9 +196,9 @@ a:active {
     color: #2e8b57;
 }
 
-a:visited {
+/* a:visited {
     color: #6a5acd;
-}
+} */
 
 @media screen and (max-width: 600px) {
     body {

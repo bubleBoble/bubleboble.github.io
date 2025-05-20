@@ -1,7 +1,7 @@
 /* Root refers to top level element of html file (<html>) */
 :root {
         /* Colors for light theme */
-        --header-bg: #bababa;
+        --header-bg: #e0e0e0;
         --nav-and-header-bg: #e0e0e0;
         --header-text: #000000;
         --theme-toggle: #8c8888;
@@ -13,32 +13,41 @@
         --menu-item-text: #000000;
         --menu-item-active: #8a5b03;
         --menu-item-active-bg: #d2d2d2;
-        --page-content-bg: #ffffff;
-        --page-content-text-bg: #ffffff;
+        --page-content-bg: #eeeeee;
+        --page-content-text-bg: #eeeeee;
         --page-content-text: #000000;
         --page-content-h1-bot-border: #464646;
         --footer-bg: #e0e0e0;
         --footer-line: #a5a5a5;
+        --footer-text: #6b6b6b;
+        --href: #003fee;
+        --href-hover: #da0505;
+        --href-active: #da0505;
+        --href-visited: #ff00f2;
 }
 
 /* This class is not acive by default. When this class is applied, it 
 overrides the default variables */
 .dark-theme {
-        /* Colors for dark theme */
-        --nav-and-header-bg: #292a2b;
-        --header-text: #00eeff;
-        --theme-toggle: #000000;
-        --menu-toggle-btn: #2e3047;
+        --header-bg: #3f3f3f;
+        --nav-and-header-bg: #3f3f3f;
+        --header-text: #e2e2e2;
+        --theme-toggle: #8c8888;
+        --theme-toggle-border: #787878;
+        --menu-toggle-btn: #8c8888;
+        --menu-toggle-btn-border: #787878;
         --hamburger: #ffffff;
         --sidebar-h3: #707793;
         --menu-item-text: #ffffff;
         --menu-item-active: #ffa600;
-        --menu-item-active-bg: #2e3047;
-        --page-content-bg: #686666;
-        --page-content-text-bg: #686666;
-        --page-content-text: #000000;
-        --page-content-h1-bot-border: #cb3131;
-        --footer-bg: #ffffff;
+        --menu-item-active-bg: #272727;
+        --page-content-bg: #6e6e6e;
+        --page-content-text-bg: #6e6e6e;
+        --page-content-text: #ffffff;
+        --page-content-h1-bot-border: #464646;
+        --footer-bg: #3f3f3f;
+        --footer-line: #000000;
+        --footer-text: #c2c2c2;
 }
 
 
@@ -58,6 +67,7 @@ body {
         box-sizing: border-box;
         font-family: "Red Hat Text", sans-serif, "Fira Sans";
         background-color: var(--nav-and-header-bg);
+        transition: 'all 0.3s ease';
 }
 
 .app {
@@ -67,21 +77,21 @@ body {
 
 /* Link style */
 a {
-        color: #1e90ff;
-        text-decoration: none;
+        color: var(--href);
+        text-decoration: underline;
         font-weight: bold;
-        transition: color 0.3s ease;
+        transition: color 0.1s ease;
 }
 
 a:hover {
-        color: #ff4500;
-        text-decoration: underline;
+        color: var(--href-hover);
+        /* text-decoration: underline; */
 }
 
 a:active {
-        color: #2e8b57;
+        color: var(--href-active);
 }
 
-a:visited {
-        color: #6a5acd;
-}
+/* a:visited {
+        color: var(--href-visited);
+} */
