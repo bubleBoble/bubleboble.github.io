@@ -130,7 +130,7 @@
         flex-basis: 0;
         padding: 0rem;
         min-height: 0;
-        min-width: 740px;
+        /* min-width: 740px; */
 }
 
 /* @media (max-width: 1024px) {

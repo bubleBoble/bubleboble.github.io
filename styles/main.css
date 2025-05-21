@@ -90,3 +90,46 @@ a:hover {
 a:active {
         color: var(--href-active);
 }
+
+/* mobile */
+@media (max-width: 768px) {
+        .page-content {
+                padding: 1rem;
+                margin: 0.5rem;
+        }
+
+        .sidebar {
+                max-width: 100%;
+                box-shadow: none;
+        }
+
+        .webpage-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 0.5rem;
+        }
+
+        .toggle-mode {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+                font-size: 90%;
+        }
+
+        .code-container {
+                font-size: 0.85rem;
+                padding: 0.5rem;
+        }
+
+        .button-group {
+                top: 5px;
+                right: 5px;
+        }
+}
