@@ -20,10 +20,13 @@
         --footer-bg: #e0e0e0;
         --footer-line: #a5a5a5;
         --footer-text: #6b6b6b;
-        --href: #003fee;
-        --href-hover: #da0505;
-        --href-active: #da0505;
-        --href-visited: #ff00f2;
+        --href: #1e90ff;
+        --href-hover: #ff4500;
+        --href-active: #2e8b57;
+
+        /*  */
+        --header-height: 50px;
+        --footer-height: 50px;
 }
 
 /* This class is not acive by default. When this class is applied, it 
@@ -41,25 +44,21 @@ overrides the default variables */
         --menu-item-text: #ffffff;
         --menu-item-active: #ffa600;
         --menu-item-active-bg: #272727;
-        --page-content-bg: #6e6e6e;
-        --page-content-text-bg: #6e6e6e;
-        --page-content-text: #ffffff;
+        --page-content-bg: #1e1e1e;
+        --page-content-text-bg: #1e1e1e;
+        --page-content-text: #e0e0e0;
         --page-content-h1-bot-border: #464646;
         --footer-bg: #3f3f3f;
         --footer-line: #000000;
         --footer-text: #c2c2c2;
+        --href: #1e90ff;
+        --href-hover: #ff4500;
+        --href-active: #2e8b57;
 }
 
-
-/* Thats how you can apply different theme */
-/*
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-}
-*/
-
+/* html {
+        min-height: 100vh;
+} */
 
 * {
         margin: 0;
@@ -78,20 +77,16 @@ body {
 /* Link style */
 a {
         color: var(--href);
-        text-decoration: underline;
+        text-decoration: none;
         font-weight: bold;
-        transition: color 0.1s ease;
+        transition: color 0.3s ease;
 }
 
 a:hover {
         color: var(--href-hover);
-        /* text-decoration: underline; */
+        text-decoration: underline;
 }
 
 a:active {
         color: var(--href-active);
 }
-
-/* a:visited {
-        color: var(--href-visited);
-} */

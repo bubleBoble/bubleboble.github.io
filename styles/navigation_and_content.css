@@ -3,8 +3,8 @@
         left: 50%;
         transform: translateX(-50%);
         display: none;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border-radius: 99px;
         background-color: var(--menu-toggle-btn);
         cursor: pointer;
@@ -27,7 +27,7 @@
         display: block;
         position: absolute;
         width: 100%;
-        height: 4px;
+        height: 3px;
         border-radius: 99px;
         background-color: var(--hamburger);
         transition-duration: .25s;
@@ -125,9 +125,11 @@
         border-top-width: 2px;
         border-top-color: var(--footer-line);
         background-color: var(--nav-and-header-bg);
-        flex: 1 1 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
         padding: 0rem;
-        min-height: inherit;
+        min-height: 0;
         min-width: 740px;
 }
 
