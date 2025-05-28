@@ -90,7 +90,14 @@ section ul {
     list-style: disc;
     padding-left: 20px;
     margin-left: 3.523rem;
+    /* margin-left: 2rem; */
     margin-right: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+li ul {
+    margin-left: 0.5rem;
 }
 
 footer {
